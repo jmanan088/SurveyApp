@@ -1,0 +1,23 @@
+<resources>
+    <string name="app_name">SurveyApp</string>
+    <string name="login">UBA Survey</string>
+    <string name="login2">Share Your Survey And Share Your Happiness</string>
+    <string name="email">Enter Email</string>
+    <string name="name">Name</string>
+    <string name="pass">Enter Password</string>
+    <string name="login_pic">Login_pic</string>
+    <string name="loginText">Login</string>
+    <string name="newAcc">Don\'t have an account?</string>
+    <string name="register">Register</string>
+    <string name="forgot_password">Forgot Password?</string>
+    <string name="newH">New Here?</string>
+    <string name="welcomme">Welcome!!</string>
+    <string name="verify">You\'re Email is not verified.</string>
+    <string name="resend">Resend</string>
+    <string name="reg_sec">Registration Successful.</string>
+    <string name="done">Done</string>
+    <string name="user_id">user id</string>
+    <string name="logout_menu">Logout</string>
+    <string name="uba">UBA Survey</string>
+    <string name="select">Select a survey.</string>
+</resources>
