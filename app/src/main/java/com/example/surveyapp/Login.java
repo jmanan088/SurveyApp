@@ -19,6 +19,7 @@ import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
 
 public class Login extends AppCompatActivity {
 
@@ -26,6 +27,7 @@ public class Login extends AppCompatActivity {
     private Button login,register;
     private TextView forgot;
     private FirebaseAuth auth;
+    private FirebaseUser user;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -36,8 +38,7 @@ public class Login extends AppCompatActivity {
         register = findViewById(R.id.registerNew);
         forgot = findViewById(R.id.forPass);
         auth = FirebaseAuth.getInstance();
-//        Intent i = new Intent(Login.this,Survey1.class);
-//        startActivity(i);
+        user = auth.getCurrentUser();
         register.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -64,6 +65,9 @@ public class Login extends AppCompatActivity {
     protected void onStart() {
         super.onStart();
         if(auth.getCurrentUser()!=null){
+            if(user.isEmailVerified()){
+                startActivity(new Intent(Login.this ,MainActivity.class));
+            }
 //            startActivity(new Intent(Login.this, Verify.class));
         }
     }
