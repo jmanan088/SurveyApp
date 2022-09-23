@@ -318,31 +318,23 @@ import java.util.UUID;
 
 //         String captionString = caption.getText().toString();
          String captionString = "Longitude"+longitude+"Latitude"+latitude;
-         if(captionString != null){
 
-             Paint paintText = new Paint(Paint.ANTI_ALIAS_FLAG);
-             paintText.setColor(Color.BLACK);
-             paintText.setTextSize(200);
-             paintText.setStrokeWidth(17);
+         Paint paintText = new Paint(Paint.ANTI_ALIAS_FLAG);
+         paintText.setColor(Color.BLACK);
+         paintText.setTextSize(180);
+         paintText.setStrokeWidth(17);
 //                paintText
-             paintText.setStyle(Paint.Style.FILL_AND_STROKE);
+         paintText.setStyle(Paint.Style.FILL_AND_STROKE);
 //                paintText.setShadowLayer(10f, 10f, 10f, Color.BLACK);
 
-             Rect rectText = new Rect();
-             paintText.getTextBounds(captionString, 0, captionString.length(), rectText);
+         Rect rectText = new Rect();
+         paintText.getTextBounds(captionString, 0, captionString.length(), rectText);
 
-             newCanvas.drawText(captionString,
-                     0,  rectText.height(), paintText);
-             newCanvas.drawText("jiojhiuj",
-                     0,  rectText.height()+10, paintText);
+         newCanvas.drawText("Longitude - "+longitude,  0,  rectText.height(), paintText);
+         newCanvas.drawText("Latitude - "+latitude,  0,  rectText.height()+200, paintText);
 
-             loca = true;
-         }
-         else{
-             Toast.makeText(getApplicationContext(),
-                     "Try Again!",
-                     Toast.LENGTH_LONG).show();
-         }
+         loca = true;
+
          return newBitmap;
      }
 
