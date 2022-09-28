@@ -36,6 +36,8 @@ public class MainActivity extends AppCompatActivity {
         userid=auth.getCurrentUser().getEmail();
         listview = findViewById(R.id.listview);
         survey.add(getString(R.string.uba));
+        listview.setDivider(null);
+        listview.setDividerHeight(0);
         MineAdapter ad = new MineAdapter(this,R.layout.options,survey);
         listview.setAdapter(ad);
         listview.setOnItemClickListener (new AdapterView.OnItemClickListener() {
