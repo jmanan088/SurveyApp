@@ -39,11 +39,23 @@ public class Login extends AppCompatActivity {
         forgot = findViewById(R.id.forPass);
         auth = FirebaseAuth.getInstance();
         user = auth.getCurrentUser();
+        if(auth.getCurrentUser()!=null){
+            if(user.isEmailVerified()){
+                startActivity(new Intent(Login.this ,MainActivity.class));
+                finish();
+                Log.d("LoginDebug", "Login - email verifed");
+            }
+            else{
+                startActivity(new Intent(Login.this ,Verify.class));
+                finish();
+                Log.d("LoginDebug", "Login - email not verified");
+            }
+        }
         register.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent i = new Intent(Login.this, Register.class);
-                startActivity(i);
+                Log.d("LoginDebug", "Login - register");
+                startActivity(new Intent(Login.this, Register.class));
             }
         });
         login.setOnClickListener(new View.OnClickListener() {
@@ -61,19 +73,8 @@ public class Login extends AppCompatActivity {
         });
     }
 
-    @Override
-    protected void onStart() {
-        super.onStart();
-        if(auth.getCurrentUser()!=null){
-            if(user.isEmailVerified()){
-                startActivity(new Intent(Login.this ,MainActivity.class));
-            }
-//            startActivity(new Intent(Login.this, Verify.class));
-        }
-    }
-
     private void login(String mail, String password) {
-        Log.d("LoginDebugging","Binded");
+        Log.d("LoginDebug","Binded");
         auth.signInWithEmailAndPassword(mail, password).addOnSuccessListener(new OnSuccessListener<AuthResult>() {
             @Override
             public void onSuccess(AuthResult authResult) {
