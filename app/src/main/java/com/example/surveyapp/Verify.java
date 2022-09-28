@@ -23,7 +23,7 @@ public class Verify extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        Log.d("LoginDebugging","Opened ");
+        Log.d("LoginDebug","VerifyOpened ");
         setContentView(R.layout.activity_verify);
         resend = findViewById(R.id.button);
         done= findViewById(R.id.location);
@@ -42,7 +42,7 @@ public class Verify extends AppCompatActivity {
 
                 }
                 else{
-                    Log.d("LoginDebugging","User not verified");
+                    Log.d("LoginDebug","verify - User not verified");
                     user.reload().addOnSuccessListener(new OnSuccessListener<Void>() {
                         @Override
                         public void onSuccess(Void unused) {
