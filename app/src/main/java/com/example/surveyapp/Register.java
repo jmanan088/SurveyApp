@@ -59,16 +59,14 @@ public class Register extends AppCompatActivity {
                 user.sendEmailVerification().addOnSuccessListener(new OnSuccessListener<Void>() {
                     @Override
                     public void onSuccess(Void unused) {
-                        Log.d("LoginDebugging","Opening Verify Activity");
+                        Log.d("LoginDebug","Register - Opening Verify Activity");
                         Toast.makeText(Register.this, "Registration Successful.", Toast.LENGTH_SHORT).show();
-                        Intent i = new Intent(Register.this,Verify.class);
-                        startActivity(i);
-                        finish();
+                        startActivity(new Intent(Register.this,Verify.class));
                     }
                 }).addOnFailureListener(new OnFailureListener() {
                     @Override
                     public void onFailure(@NonNull Exception e) {
-                        Log.d("onFailure: Email Not sent",e.getMessage());
+                        Log.d("onFailure: Email Not sent","Register - "+e.getMessage());
                     }
                 });
                 finish();
@@ -76,7 +74,7 @@ public class Register extends AppCompatActivity {
         }).addOnFailureListener(new OnFailureListener() {
             @Override
             public void onFailure(@NonNull Exception e) {
-                Log.e("LoginDebugging",e.getMessage());
+                Log.e("LoginDebug","Register - "+e.getMessage());
                 Toast.makeText(Register.this, "Registration Failed.", Toast.LENGTH_LONG).show();
             }
         });
