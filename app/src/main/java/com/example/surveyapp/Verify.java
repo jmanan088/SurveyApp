@@ -52,7 +52,6 @@ public class Verify extends AppCompatActivity {
                             else{
                                 Toast.makeText(Verify.this, "User verification failed", Toast.LENGTH_SHORT).show();
                             }
-
                         }
                     });
                 }

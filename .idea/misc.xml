@@ -1,4 +1,3 @@
-<?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
@@ -7,6 +6,7 @@
         <entry key="..\:/Coding/Android/SurveyApp/app/src/main/res/drawable/corners.xml" value="0.22" />
         <entry key="..\:/Coding/Android/SurveyApp/app/src/main/res/drawable/edit_login_text.xml" value="0.2195" />
         <entry key="..\:/Coding/Android/SurveyApp/app/src/main/res/drawable/ic_baseline_photo_camera_24.xml" value="0.2265" />
+        <entry key="..\:/Coding/Android/SurveyApp/app/src/main/res/drawable/login_button.xml" value="0.22" />
         <entry key="..\:/Coding/Android/SurveyApp/app/src/main/res/drawable/scrollback.xml" value="0.223" />
         <entry key="..\:/Coding/Android/SurveyApp/app/src/main/res/layout/activity_location.xml" value="0.2390625" />
         <entry key="..\:/Coding/Android/SurveyApp/app/src/main/res/layout/activity_login.xml" value="0.2" />
@@ -14,12 +14,12 @@
         <entry key="..\:/Coding/Android/SurveyApp/app/src/main/res/layout/activity_register.xml" value="0.152" />
         <entry key="..\:/Coding/Android/SurveyApp/app/src/main/res/layout/activity_survey1.xml" value="0.23800195886385897" />
         <entry key="..\:/Coding/Android/SurveyApp/app/src/main/res/layout/activity_verify.xml" value="0.253125" />
-        <entry key="..\:/Coding/Android/SurveyApp/app/src/main/res/layout/options.xml" value="0.253125" />
+        <entry key="..\:/Coding/Android/SurveyApp/app/src/main/res/layout/options.xml" value="0.2" />
         <entry key="..\:/Coding/Android/SurveyApp/app/src/main/res/menu/user_id.xml" value="0.1" />
       </map>
     </option>
   </component>
-  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="Android Studio default JDK" project-jdk-type="JavaSDK">
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_17" project-jdk-name="jbr-17" project-jdk-type="JavaSDK">
     <output url="file://$PROJECT_DIR$/build/classes" />
   </component>
   <component name="ProjectType">

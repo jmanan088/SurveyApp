@@ -46,9 +46,7 @@ public class Login extends AppCompatActivity {
                 Log.d("LoginDebug", "Login - email verifed");
             }
             else{
-                startActivity(new Intent(Login.this ,Verify.class));
-                finish();
-                Log.d("LoginDebug", "Login - email not verified");
+                verifyUser();
             }
         }
         register.setOnClickListener(new View.OnClickListener() {
@@ -79,9 +77,7 @@ public class Login extends AppCompatActivity {
             @Override
             public void onSuccess(AuthResult authResult) {
                 Toast.makeText(Login.this, "Login Successful", Toast.LENGTH_SHORT).show();
-                Intent i = new Intent(Login.this, Verify.class);
-                startActivity(i);
-                finish();
+                verifyUser();
             }
         }).addOnFailureListener(new OnFailureListener() {
             @Override
@@ -90,4 +86,11 @@ public class Login extends AppCompatActivity {
             }
         });
     }
+
+    public void verifyUser(){
+        Intent i = new Intent(Login.this,Verify.class);
+        startActivity(i);
+        finish();
+    }
+
 }
